@@ -12,24 +12,24 @@
 </head>
 <body>
   <form class="calculator">
-    <label for="first-number">First Number</label><br>
+    <!-- <label for="first-number">First Number</label><br> -->
     <!-- the "onkeyup" event listener passes its input's "value" to the "saveFirstNumber" function in the main.js file -->
     <input type="number" id="first-Number" name="first-Number" placeholder="type the first number" value="" onkeyup="saveFirstNumber(this.value)">
     <br>
-    <label for="second-number">Second Number</label><br>
+    <!-- <label for="second-number">Second Number</label><br> -->
     <input type="number" id="second-Number" name="second-Number" placeholder="type the second number" onkeyup="saveSecondNumber(this.value)">
-    <div>
+    <div id="button">
       <!-- the "onclick" event listener passes its element's "id" to the "changeOperation" function in the main.js file -->
       <button class="button1" type="button" name="add" id="addition" onclick="changeOperation(this.id)">+</button>
       <button class="button2" type="button" name="subtract" id="subtraction" onclick="changeOperation(this.id)">-</button>
+      
       <button class="button3" type="button" name="multiply" id="multiplication" onclick="changeOperation(this.id)">*</button>
       <button class="button4" type="button" name="divide" id="division" onclick="changeOperation(this.id)">/</button>
       <button class="button5" type="button" name="modulus" id="modulus" onclick="changeOperation(this.id)">%</button>
+      <!-- this "onclick" calls the "equal" function in the main.js file -->
+      <button class="buttonReset"type="reset">C</button>
+      <button class="button6" type="button" onclick="equals()">=</button>
     </div>
-    
-    <!-- this "onclick" calls the "equal" function in the main.js file -->
-    <button class="button6" type="button" onclick="equals()">=</button>
-    <button class="buttonReset"type="reset">C</button>
     <div id="result"></div>
   </form>
   
